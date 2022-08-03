@@ -30,7 +30,8 @@
 
 ## Boolean
 
-A boolean data type represents one of the two values: _True_ or _False_. The use of these data types will be clear once we start using the comparison operator. The first letter **T** for True and **F** for False should be capital unlike JavaScript.
+Un tipo de dato booleano representa uno de los dos valores: _True_ o _False_. El uso de estos tipos de datos quedará claro una vez que empecemos a utilizar el operador de comparación. La primera letra **T** para Verdadero y **F** para Falso debe ser mayúscula a diferencia de JavaScript.
+
 **Example: Boolean Values**
 
 ```py
@@ -40,23 +41,23 @@ print(False)
 
 ## Operators
 
-Python language supports several types of operators. In this section, we will focus on few of them.
+El lenguaje Python soporta varios tipos de operadores. En esta sección, nos centraremos en algunos de ellos.
 
 ### Assignment Operators
 
-Assignment operators are used to assign values to variables. Let us take = as an example. Equal sign in mathematics shows that two values are equal, however in Python it means we are storing a value in a certain variable and we call it assignment or a assigning value to a variable. The table below shows the different types of python assignment operators, taken from [w3school](https://www.w3schools.com/python/python_operators.asp).
+Los operadores de asignación se utilizan para asignar valores a las variables. Tomemos = como ejemplo. El signo igual en matemáticas muestra que dos valores son iguales, sin embargo en Python significa que estamos almacenando un valor en una determinada variable y lo llamamos asignación o un valor de asignación a una variable. La siguiente tabla muestra los diferentes tipos de operadores de asignación en Python, tomados de [w3school](https://www.w3schools.com/python/python_operators.asp).
 
 ![Assignment Operators](../images/assignment_operators.png)
 
 ### Arithmetic Operators:
 
-- Addition(+): a + b
-- Subtraction(-): a - b
-- Multiplication(*): a * b
+- Adición(+): a + b
+- Sustracción(-): a - b
+- Multiplicación(*): a * b
 - Division(/): a / b
-- Modulus(%): a % b
+- Módulo(%): a % b
 - Floor division(//): a // b
-- Exponentiation(**): a ** b
+- Potenciacion(**): a ** b
 
 ![Arithmetic Operators](../images/arithmetic_operators.png)
 

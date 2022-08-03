@@ -1,5 +1,5 @@
 # Introduction
-# Day 1 - 30DaysOfPython Challenge
+# Day 1 - 30 Days Of Python Challenge
 
 print(2 + 3)   # addition(+)
 print(3 - 1)   # subtraction(-)
