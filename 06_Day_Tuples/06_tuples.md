@@ -36,25 +36,25 @@
 
 ## Tuples
 
-A tuple is a collection of different data types which is ordered and unchangeable (immutable). Tuples are written with round brackets, (). Once a tuple is created, we cannot change its values. We cannot use add, insert, remove methods in a tuple because it is not modifiable (mutable). Unlike list, tuple has few methods. Methods related to tuples:
+Una tupla es una colección de diferentes tipos de datos que está ordenada y es inmutable. Las tuplas se escriben con corchetes, (). Una vez creada una tupla, no podemos cambiar sus valores. No podemos utilizar los métodos add, insert, remove en una tupla porque no es modificable (mutable). A diferencia de las listas, las tuplas tienen pocos métodos. Métodos relacionados con las tuplas:
 
-- tuple(): to create an empty tuple
-- count(): to count the number of a specified item in a tuple
-- index(): to find the index of a specified item in a tuple
-- + operator: to join two or more tuples and to create a new tuple
+- tuple(): para crear una tupla vacía
+- count(): para contar el número de un elemento especificado en una tupla
+- index(): para encontrar el índice de un elemento especificado en una tupla
+- Operador +: para unir dos o más tuplas y crear una nueva tupla
 
 ### Creating a Tuple
 
-- Empty tuple: Creating an empty tuple
+- Empty tuple: Creación de una tupla vacía
   
   ```py
   # syntax
   empty_tuple = ()
-  # or using the tuple constructor
+  # o utilizando el constructor de tuplas
   empty_tuple = tuple()
   ```
 
-- Tuple with initial values
+- Tuple con valores iniciales
   
   ```py
   # syntax
@@ -67,7 +67,7 @@ A tuple is a collection of different data types which is ordered and unchangeabl
 
 ### Tuple length
 
-We use the _len()_ method to get the length of a tuple.
+Utilizamos el método _len()_ para obtener la longitud de una tupla.
 
 ```py
 # syntax
@@ -77,8 +77,8 @@ len(tpl)
 
 ### Accessing Tuple Items
 
-- Positive Indexing
-  Similar to the list data type we use positive or negative indexing to access tuple items.
+- Indexación positiva Al igual que el tipo de datos lista, utilizamos la indexación positiva o negativa para acceder a los elementos de las tuplas.
+
   ![Accessing tuple items](../images/tuples_index.png)
 
   ```py
@@ -95,9 +95,9 @@ len(tpl)
   last_index =len(fruits) - 1
   last_fruit = fruits[las_index]
   ```
+  
+ - La indexación negativa significa que empezando por el final, -1 se refiere al último elemento, -2 se refiere al penúltimo y el negativo de la longitud de la lista/tupla se refiere al primer elemento.
 
-- Negative indexing
-  Negative indexing means beginning from the end, -1 refers to the last item, -2 refers to the second last and the negative of the list/tuple length refers to the first item.
   ![Tuple Negative indexing](../images/tuple_negative_indexing.png)
 
   ```py
@@ -116,27 +116,27 @@ len(tpl)
 
 ### Slicing tuples
 
-We can slice out a sub-tuple by specifying a range of indexes where to start and where to end in the tuple, the return value will be a new tuple with the specified items.
+Podemos cortar un sub-tuple especificando un rango de índices donde empezar y donde terminar en la tupla, el valor de retorno será una nueva tupla con los elementos especificados.
 
-- Range of Positive Indexes
+- Rango de índices positivos
 
   ```py
   # Syntax
   tpl = ('item1', 'item2', 'item3','item4')
-  all_items = tpl[0:4]         # all items
-  all_items = tpl[0:]         # all items
-  middle_two_items = tpl[1:3]  # does not include item at index 3
+  all_items = tpl[0:4]         # todos los items
+  all_items = tpl[0:]         # todos los items
+  middle_two_items = tpl[1:3]  # no incluye el elemento del índice 3
   ```
 
   ```py
   fruits = ('banana', 'orange', 'mango', 'lemon')
-  all_fruits = fruits[0:4]    # all items
-  all_fruits= fruits[0:]      # all items
-  orange_mango = fruits[1:3]  # doesn't include item at index 3
+  all_fruits = fruits[0:4]    # todos los items
+  all_fruits= fruits[0:]      # todos los items
+  orange_mango = fruits[1:3]  # no incluye el item del índice 3
   orange_to_the_rest = fruits[1:]
   ```
 
-- Range of Negative Indexes
+- Rango de índices negativos
 
   ```py
   # Syntax
@@ -154,7 +154,7 @@ We can slice out a sub-tuple by specifying a range of indexes where to start and
 
 ### Changing Tuples to Lists
 
-We can change tuples to lists and lists to tuples. Tuple is immutable if we want to modify a tuple we should change it to a list.
+Podemos cambiar tuplas a listas y listas a tuplas. La tupla es inmutable si queremos modificar una tupla debemos cambiarla por una lista.
 
 ```py
 # Syntax
@@ -173,7 +173,7 @@ print(fruits)     # ('apple', 'orange', 'mango', 'lemon')
 
 ### Checking an Item in a Tuple
 
-We can check if an item exists or not in a tuple using _in_, it returns a boolean.
+Podemos comprobar si un elemento existe o no en una tupla utilizando _in_, que devuelve un booleano.
 
 ```py
 # Syntax
@@ -190,7 +190,7 @@ fruits[0] = 'apple' # TypeError: 'tuple' object does not support item assignment
 
 ### Joining Tuples
 
-We can join two or more tuples using + operator
+Podemos unir dos o más tuplas utilizando el operador +
 
 ```py
 # syntax
@@ -207,7 +207,7 @@ fruits_and_vegetables = fruits + vegetables
 
 ### Deleting Tuples
 
-It is not possible to remove a single item in a tuple but it is possible to delete the tuple itself using _del_.
+No es posible eliminar un solo elemento de una tupla, pero sí es posible eliminar la propia tupla utilizando _del_.
 
 ```py
 # syntax
@@ -221,30 +221,30 @@ fruits = ('banana', 'orange', 'mango', 'lemon')
 del fruits
 ```
 
-🌕 You are so brave, you made it to this far. You have just completed day 6 challenges and you are 6 steps a head in to your way to greatness. Now do some exercises for your brain and for your muscle.
+🌕 Eres muy valiente, has llegado hasta aquí. Acabas de completar el sexto día de desafíos y estás a seis pasos de tu camino hacia la grandeza. Ahora haz algunos ejercicios para tu cerebro y para tus músculos.
 
 ## 💻 Exercises: Day 6
 
 ### Exercises: Level 1
 
-1. Create an empty tuple
-2. Create a tuple containing names of your sisters and your brothers (imaginary siblings are fine)
-3. Join brothers and sisters tuples and assign it to siblings
-4. How many siblings do you have?
-5. Modify the siblings tuple and add the name of your father and mother and assign it to family_members
+1. Crear una tupla vacía
+2. Crea una tupla que contenga los nombres de tus hermanas y hermanos (los hermanos imaginarios están bien)
+3. Unir las tuplas hermanos y hermanas y asignarlas a los hermanos
+4. ¿Cuántos hermanos tienes?
+5. Modifica la tupla siblings y añade el nombre de tu padre y tu madre y asígnalo a family_members
 
 ### Exercises: Level 2
 
-1. Unpack siblings and parents from family_members
-1. Create fruits, vegetables and animal products tuples. Join the three tuples and assign it to a variable called food_stuff_tp.
-1. Change the about food_stuff_tp  tuple to a food_stuff_lt list
-1. Slice out the middle item or items from the food_stuff_tp tuple or food_stuff_lt list.
-1. Slice out the first three items and the last three items from food_staff_lt list
-1. Delete the food_staff_tp tuple completely
-1. Check if an item exists in  tuple:
+1. Desempaquetar hermanos y padres de family_members
+2. Crea las tuplas frutas, verduras y productos animales. Unir las tres tuplas y asignarlas a una variable llamada food_stuff_tp.
+3. Cambiar la tupla about food_stuff_tp por una lista food_stuff_lt
+4. Extraiga el elemento o elementos del medio de la tupla food_stuff_tp o de la lista food_stuff_lt.
+5. Corte los tres primeros elementos y los tres últimos elementos de la lista food_staff_lt
+6. Elimine la tupla food_staff_tp por completo
+7. Compruebe si existe un elemento en la tupla:
 
-- Check if 'Estonia' is a nordic country
-- Check if 'Iceland' is a nordic country
+- Compruebe si "Estonia" es un país nórdico
+- Compruebe si "Iceland" es un país nórdico
 
   ```py
   nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')

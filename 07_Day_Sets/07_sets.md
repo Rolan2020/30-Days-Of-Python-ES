@@ -44,13 +44,13 @@
 
 ## Sets
 
-Set is a collection of items. Let me take you back to your elementary or high school Mathematics lesson. The Mathematics definition of a set can be applied also in Python. Set is a collection of unordered and un-indexed distinct elements. In Python set is used to store unique items, and it is possible to find the _union_, _intersection_, _difference_, _symmetric difference_, _subset_, _super set_ and _disjoint set_ among sets.
+Un Set (conjunto) es una colección de elementos. Permíteme que te lleve de vuelta a tu lección de matemáticas de la escuela primaria o secundaria. La definición matemática de un conjunto se puede aplicar también en Python. Un conjunto es una colección de elementos distintos no ordenados y no indexados. En Python el conjunto se utiliza para almacenar elementos únicos, y es posible encontrar la _union_, _intersection_, _difference_, _symmetric difference_, _subset_, _super set_ y  _disjoint set_ entre conjuntos.
 
 ### Creating a Set
 
-We use curly brackets, {} to create a set or the *set()* built-in function.
+Utilizamos llaves, {} para crear un conjunto o la función integrada *set()*.
 
-- Creating an empty set
+- Creación de un conjunto vacío
 
 ```py
 # syntax
@@ -59,7 +59,7 @@ st = {}
 st = set()
 ```
 
-- Creating a set with initial items
+- Creación de un conjunto con elementos iniciales
 
 ```py
 # syntax
@@ -75,7 +75,7 @@ fruits = {'banana', 'orange', 'mango', 'lemon'}
 
 ### Getting Set's Length
 
-We use **len()** method to find the length of a set.
+Utilizamos el método **len()** para encontrar la longitud de un conjunto.
 
 ```py
 # syntax
@@ -92,16 +92,16 @@ len(fruits)
 
 ### Accessing Items in a Set
 
-We use loops to access items. We will see this in loop section
+Utilizamos bucles para acceder a los elementos. Lo veremos en la sección de bucles
 
 ### Checking an Item
 
-To check if an item exist in a list we use _in_ membership operator.
+Para comprobar si un elemento existe en una lista utilizamos el operador de pertenencia _in_.
 
 ```py
 # syntax
 st = {'item1', 'item2', 'item3', 'item4'}
-print("Does set st contain item3? ", 'item3' in st) # Does set st contain item3? True
+print("Does set st contain item3? ", 'item3' in st) # ¿El set st contiene el item3? Verdadero
 ```
 
 **Example:**
@@ -113,7 +113,7 @@ print('mango' in fruits ) # True
 
 ### Adding Items to a Set
 
-Once a set is created we cannot change any items and we can also add additional items.
+Una vez creado un conjunto, no podemos cambiar ningún elemento y también podemos añadir elementos adicionales.
 
 - Add one item using _add()_
 
@@ -130,8 +130,8 @@ fruits = {'banana', 'orange', 'mango', 'lemon'}
 fruits.add('lime')
 ```
 
-- Add multiple items using _update()_
-  The *update()* allows to add multiple items to a set. The *update()* takes a list argument.
+- Añadir múltiples elementos mediante _update()_
+  La función *update()* permite añadir múltiples elementos a un conjunto. La función *update()* toma un argumento de lista.
 
 ```py
 # syntax
@@ -149,7 +149,7 @@ fruits.update(vegetables)
 
 ### Removing Items from a Set
 
-We can remove an item from a set using _remove()_ method. If the item is not found _remove()_ method will raise errors, so it is good to check if the item exist in the given set. However, _discard()_ method doesn't raise any errors.
+Podemos eliminar un elemento de un conjunto utilizando el método _remove()_. Si el elemento no se encuentra, el método _remove()_ dará lugar a errores, por lo que es bueno comprobar si el elemento existe en el conjunto dado. Sin embargo, el método _discard()_ no genera ningún error.
 
 ```py
 # syntax
@@ -157,17 +157,16 @@ st = {'item1', 'item2', 'item3', 'item4'}
 st.remove('item2')
 ```
 
-The pop() methods remove a random item from a list and it returns the removed item.
+Los métodos pop() eliminan un elemento aleatorio de una lista y devuelven el elemento eliminado.
 
 **Example:**
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
-fruits.pop()  # removes a random item from the set
-
+fruits.pop()  # elimina un elemento aleatorio del conjunto
 ```
 
-If we are interested in the removed item.
+Si estamos interesados en el elemento eliminado.
 
 ```py
 fruits = {'banana', 'orange', 'mango', 'lemon'}
@@ -177,7 +176,7 @@ removed_item = fruits.pop()
 
 ### Clearing Items in a Set
 
-If we want to clear or empty the set we use _clear_ method.
+Si queremos borrar o vaciar el conjunto utilizamos el método _clear_.
 
 ```py
 # syntax
@@ -195,7 +194,7 @@ print(fruits) # set()
 
 ### Deleting a Set
 
-If we want to delete the set itself we use _del_ operator.
+Si queremos borrar el propio conjunto utilizamos el operador _del_.
 
 ```py
 # syntax
@@ -212,7 +211,7 @@ del fruits
 
 ### Converting List to Set
 
-We can convert list to set and set to list. Converting list to set removes duplicates and only unique items will be reserved.
+Podemos convertir lista en conjunto y conjunto en lista. La conversión de lista a conjunto elimina los duplicados y sólo se reservarán los elementos únicos.
 
 ```py
 # syntax
@@ -229,10 +228,9 @@ fruits = set(fruits) # {'mango', 'lemon', 'banana', 'orange'}
 
 ### Joining Sets
 
-We can join two sets using the _union()_ or _update()_ method.
+Podemos unir dos conjuntos utilizando el método _union()_ o _update()_.
 
-- Union
-  This method returns a new set
+- Union -> Este método devuelve un nuevo conjunto
 
 ```py
 # syntax
@@ -250,7 +248,7 @@ print(fruits.union(vegetables)) # {'lemon', 'carrot', 'tomato', 'banana', 'mango
 ```
 
 - Update
-  This method inserts a set into a given set
+  Este método inserta un conjunto en un conjunto dado
 
 ```py
 # syntax
@@ -270,7 +268,7 @@ print(fruits) # {'lemon', 'carrot', 'tomato', 'banana', 'mango', 'orange', 'cabb
 
 ### Finding Intersection Items
 
-Intersection returns a set of items which are in both the sets. See the example
+La intersección devuelve un conjunto de elementos que están en ambos conjuntos. Véase el ejemplo
 
 ```py
 # syntax
@@ -293,7 +291,7 @@ python.intersection(dragon)     # {'o', 'n'}
 
 ### Checking Subset and Super Set
 
-A set can be a subset or super set of other sets:
+Un set puede ser un subset o un super set de otros sets:
 
 - Subset: _issubset()_
 - Super set: _issuperset_
@@ -321,7 +319,7 @@ python.issubset(dragon)     # False
 
 ### Checking the Difference Between Two Sets
 
-It returns the difference between two sets.
+Devuelve la diferencia entre dos conjuntos.
 
 ```py
 # syntax
@@ -346,7 +344,7 @@ dragon.difference(python)     # {'d', 'r', 'a', 'g'}
 
 ### Finding Symmetric Difference Between Two Sets
 
-It returns the the symmetric difference between two sets. It means that it returns a set that contains all items from both sets, except items that are present in both sets, mathematically: (A\B) ∪ (B\A)
+Devuelve la diferencia simétrica entre dos conjuntos. Significa que devuelve un conjunto que contiene todos los elementos de ambos conjuntos, excepto los elementos que están presentes en ambos conjuntos, matemáticamente: (A\B) ∪ (B\A)
 
 ```py
 # syntax
@@ -370,7 +368,7 @@ python.symmetric_difference(dragon)  # {'r', 't', 'p', 'y', 'g', 'a', 'd', 'h'}
 
 ### Joining Sets
 
-If two sets do not have a common item or items we call them disjoint sets. We can check if two sets are joint or disjoint using _isdisjoint()_ method.
+Si dos conjuntos no tienen un elemento o elementos comunes los llamamos conjuntos disjuntos. Podemos comprobar si dos conjuntos son conjuntos o disjuntos utilizando el método _isdisjoint()_.
 
 ```py
 # syntax
@@ -384,14 +382,14 @@ st2.isdisjoint(st1) # False
 ```py
 even_numbers = {0, 2, 4 ,6, 8}
 even_numbers = {1, 3, 5, 7, 9}
-even_numbers.isdisjoint(odd_numbers) # True, because no common item
+even_numbers.isdisjoint(odd_numbers) # True, porque ningún elemento común
 
 python = {'p', 'y', 't', 'h', 'o','n'}
 dragon = {'d', 'r', 'a', 'g', 'o','n'}
-python.isdisjoint(dragon)  # False, there are common items {'o', 'n'}
+python.isdisjoint(dragon)  # False, hay elementos comunes {'o', 'n'}
 ```
 
-🌕 You are a rising star . You have just completed day 7 challenges and you are 7 steps ahead in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Eres una estrella en ascenso. Acabas de completar los desafíos del día 7 y estás 7 pasos adelante en tu camino hacia la grandeza. Ahora haz algunos ejercicios para tu cerebro y tus músculos.
 
 ## 💻 Exercises: Day 7
 
@@ -405,27 +403,27 @@ age = [22, 19, 24, 25, 26, 24, 25, 24]
 
 ### Exercises: Level 1
 
-1. Find the length of the set it_companies
-2. Add 'Twitter' to it_companies
-3. Insert multiple IT companies at once to the set it_companies
-4. Remove one of the companies from the set it_companies
-5. What is the difference between remove and discard
+1. Hallar la longitud del conjunto it_companies
+2. Añadir 'Twitter' a it_companies
+3. Insertar varias empresas IT a la vez en el conjunto it_companies
+4. Eliminar una de las empresas del conjunto it_companies
+5. Cuál es la diferencia entre eliminar y descartar
 
 ### Exercises: Level 2
 
-1. Join A and B
-1. Find A intersection B
-1. Is A subset of B
-1. Are A and B disjoint sets
-1. Join A with B and B with A
-1. What is the symmetric difference between A and B
-1. Delete the sets completely
+1. Unir A y B
+2. Encuentre la intersección de A con B
+3. Es A subconjunto de B
+4. ¿Son A y B conjuntos disjuntos?
+5. Une A con B y B con A
+6. Cuál es la diferencia simétrica entre A y B
+7. Elimina los conjuntos por completo
 
 ### Exercises: Level 3
 
-1. Convert the ages to a set and compare the length of the list and the set, which one is bigger?
-1. Explain the difference between the following data types: string, list, tuple and set
-2. _I am a teacher and I love to inspire and teach people._ How many unique words have been used in the sentence? Use the split methods and set to get the unique words.
+1. Convierte las edades en un conjunto y compara la longitud de la lista y del conjunto, ¿cuál es mayor?
+2. Explica la diferencia entre los siguientes tipos de datos: cadena, lista, tupla y conjunto
+3. _I am a teacher and I love to inspire and teach people._ ¿Cuántas palabras únicas se han utilizado en la frase? Utiliza los métodos de división y conjunto para obtener las palabras únicas.
 
 
 🎉 CONGRATULATIONS ! 🎉
