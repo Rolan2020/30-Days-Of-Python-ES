@@ -40,47 +40,46 @@
 
 ## Strings
 
-Text is a string data type. Any data type written as text is a string. Any data under single, double or triple quote are strings. There are different string methods and built-in functions to deal with string data types. To check the length of a string use the len() method.
+El texto es un tipo de datos string. Cualquier tipo de dato escrito como texto es una string. Cualquier dato bajo comillas simples, dobles o triples son strings. Hay diferentes métodos de stringy funciones incorporadas para tratar los tipos de datos de string. Para comprobar la longitud de una string se utiliza el método **len()**.
 
 ### Creating a String
 
 ```py
-letter = 'P'                # A string could be a single character or a bunch of texts
+letter = 'P'                # Una string puede ser un solo carácter o un grupo de textos
 print(letter)               # P
 print(len(letter))          # 1
-greeting = 'Hello, World!'  # String could be made using a single or double quote,"Hello, World!"
+greeting = 'Hello, World!'  # String puede hacerse con comillas simples o dobles,"Hello, World!"
 print(greeting)             # Hello, World!
 print(len(greeting))        # 13
 sentence = "I hope you are enjoying 30 days of Python Challenge"
 print(sentence)
 ```
 
-Multiline string is created by using triple single (''') or triple double quotes ("""). See the example below.
+El string multilínea se crea utilizando tres comillas simples (''') o tres comillas dobles ("""). Véase el ejemplo siguiente.
 
 ```py
-multiline_string = '''I am a teacher and enjoy teaching.
-I didn't find anything as rewarding as empowering people.
-That is why I created 30 days of python.'''
+multiline_string = '''Soy profesor y disfruto enseñando.
+No encontré nada tan gratificante como capacitar a la gente.
+Por eso he creado 30 días de python.'''
 print(multiline_string)
 
 # Another way of doing the same thing
-multiline_string = """I am a teacher and enjoy teaching.
-I didn't find anything as rewarding as empowering people.
-That is why I created 30 days of python."""
+multiline_string = """Soy profesor y disfruto enseñando.
+No encontré nada tan gratificante como capacitar a la gente.
+Por eso he creado 30 días de python."""
 print(multiline_string)
 ```
 
 ### String Concatenation
 
-We can connect strings together. Merging or connecting strings is called concatenation. See the example below:
-
+Podemos conectar strings entre sí. La fusión o conexión de strings se denomina concatenación. Example:
 ```py
 first_name = 'Asabeneh'
 last_name = 'Yetayeh'
 space = ' '
 full_name = first_name  +  space + last_name
 print(full_name) # Asabeneh Yetayeh
-# Checking the length of a string using len() built-in function
+# Comprobación de la longitud de un string utilizando la función  len()
 print(len(first_name))  # 8
 print(len(last_name))   # 7
 print(len(first_name) > len(last_name)) # True
@@ -89,72 +88,72 @@ print(len(full_name)) # 16
 
 ### Escape Sequences in Strings
 
-In Python and other programming languages \ followed by a character is an escape sequence. Let us see the most common escape characters:
+En Python y otros lenguajes de programación, un carácter seguido de otro es una secuencia de escape. Veamos los caracteres de escape más comunes:
 
-- \n: new line
-- \t: Tab means(8 spaces)
+- \n: nueva línea
+- \t: significa Tab (8 spaces)
 - \\\\: Back slash
-- \\': Single quote (')
-- \\": Double quote (")
+- \\': comilla simple (')
+- \\": Doble comilla (")
 
-Now, let us see the use of the above escape sequences with examples.
+Ahora, veamos el uso de las secuencias de escape anteriores con ejemplos.
 
 ```py
-print('I hope everyone is enjoying the Python Challenge.\nAre you ?') # line break
-print('Days\tTopics\tExercises') # adding tab space or 4 spaces 
+print('Espero que todo el mundo esté disfrutando del Reto Python.) # salto de línea
+print('Days\tTopics\tExercises') # añadir un espacio de tabulación o 4 espacios 
 print('Day 1\t3\t5')
 print('Day 2\t3\t5')
 print('Day 3\t3\t5')
 print('Day 4\t3\t5')
-print('This is a backslash  symbol (\\)') # To write a backslash
-print('In every programming language it starts with \"Hello, World!\"') # to write a double quote inside a single quote
+print('Este es un símbolo de barra invertida (\\)') # Para escribir una barra invertida
+print('En todos los lenguajes de programación se empieza por \"Hello, World!\"') # para escribir una comilla doble dentro de una comilla simple
 
-# output
-I hope every one is enjoying the Python Challenge.
-Are you ?
+# salida
+Espero que todos estén disfrutando del Reto Python.
+
 Days	Topics	Exercises
 Day 1	5	    5
 Day 2	6	    20
 Day 3	5	    23
 Day 4	1	    35
-This is a backslash  symbol (\)
-In every programming language it starts with "Hello, World!"
+Esto es un símbolo de barra invertida (\)
+En todos los lenguajes de programación se empieza por "Hello, World!"
 ```
 
 ### String formatting
 
 #### Old Style String Formatting (% Operator)
 
-In Python there are many ways of formatting strings. In this section, we will cover some of them.
-The "%" operator is used to format a set of variables enclosed in a "tuple" (a fixed size list), together with a format string, which contains normal text together with "argument specifiers", special symbols like "%s", "%d", "%f", "%.<small>number of digits</small>f".
+En Python hay muchas formas de formatear Strings. En esta sección, cubriremos algunas de ellas.
+El operador "%" se utiliza para formatear un conjunto de variables encerradas en una "tupla" (una lista de tamaño fijo), junto con un string de formato, que contiene texto normal junto con "argument specifiers", símbolos especiales como "%s", "%d", "%f", "%.<small>number of digits</small>f".
 
-- %s - String (or any object with a string representation, like numbers)
-- %d - Integers
-- %f - Floating point numbers
-- "%.<small>number of digits</small>f" - Floating point numbers with fixed precision
+- %s - String (o cualquier objeto con representación de string, como los números)
+- %d - Números enteros
+- %f - Números de coma flotante
+- "%.<small>number of digits</small>f" - Números de coma flotante con precisión fija
 
 ```py
-# Strings only
+# Solo Strings
 first_name = 'Asabeneh'
 last_name = 'Yetayeh'
 language = 'Python'
 formated_string = 'I am %s %s. I teach %s' %(first_name, last_name, language)
 print(formated_string)
 
-# Strings  and numbers
+# Strings  y  numeros
 radius = 10
 pi = 3.14
 area = pi * radius ** 2
-formated_string = 'The area of circle with a radius %d is %.2f.' %(radius, area) # 2 refers the 2 significant digits after the point
+formated_string = 'The area of circle with a radius %d is %.2f.' %(radius, area) # 2 se refiere a los dos dígitos significativos después del punto
 
 python_libraries = ['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']
 formated_string = 'The following are python libraries:%s' % (python_libraries)
-print(formated_string) # "The following are python libraries:['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']"
+print(formated_string) # "Las siguientes son bibliotecas de python:['Django', 'Flask', 'NumPy', 'Matplotlib','Pandas']"
 ```
 
 #### New Style String Formatting (str.format)
 
-This formatting is introduced in Python version 3.
+Este formato se introduce en la versión 3 de Python.
 
 ```py
 
@@ -169,7 +168,7 @@ b = 3
 print('{} + {} = {}'.format(a, b, a + b))
 print('{} - {} = {}'.format(a, b, a - b))
 print('{} * {} = {}'.format(a, b, a * b))
-print('{} / {} = {:.2f}'.format(a, b, a / b)) # limits it to two digits after decimal
+print('{} / {} = {:.2f}'.format(a, b, a / b)) # lo limita a dos dígitos después del decimal
 print('{} % {} = {}'.format(a, b, a % b))
 print('{} // {} = {}'.format(a, b, a // b))
 print('{} ** {} = {}'.format(a, b, a ** b))
@@ -187,14 +186,14 @@ print('{} ** {} = {}'.format(a, b, a ** b))
 radius = 10
 pi = 3.14
 area = pi * radius ** 2
-formated_string = 'The area of a circle with a radius {} is {:.2f}.'.format(radius, area) # 2 digits after decimal
+formated_string = 'The area of a circle with a radius {} is {:.2f}.'.format(radius, area) # 2 dígitos después del decimal
 print(formated_string)
 
 ```
 
 #### String Interpolation / f-Strings (Python 3.6+)
 
-Another new string formatting is string interpolation, f-strings. Strings start with f and we can inject the data in their corresponding positions.
+Otro nuevo formato de string es la interpolación de strings, f-strings. Las string empiezan por f y podemos inyectar los datos en sus posiciones correspondientes.
 
 ```py
 a = 4
@@ -210,13 +209,13 @@ print(f'{a} ** {b} = {a ** b}')
 
 ### Python Strings as Sequences of Characters
 
-Python strings are sequences of characters, and share their basic methods of access with other Python ordered sequences of objects – lists and tuples. The simplest way of extracting single characters from strings (and individual members from any sequence) is to unpack them into corresponding variables.
+Los strings de Python son secuencias de caracteres, y comparten sus métodos básicos de acceso con otras secuencias ordenadas de objetos de Python: listas y tuplas. La forma más sencilla de extraer caracteres individuales de las cadenas (y miembros individuales de cualquier secuencia) es desempaquetarlos en las variables correspondientes.
 
 #### Unpacking Characters
 
 ```
 language = 'Python'
-a,b,c,d,e,f = language # unpacking sequence characters into variables
+a,b,c,d,e,f = language # unpacking secuencias de caracteres en variables
 print(a) # P
 print(b) # y
 print(c) # t
@@ -227,7 +226,7 @@ print(f) # n
 
 #### Accessing Characters in Strings by Index
 
-In programming counting starts from zero. Therefore the first letter of a string is at zero index and the last letter of a string is the length of a string minus one.
+En programación, el conteo comienza desde cero. Por lo tanto, la primera letra de una cadena está en el índice cero y la última letra de una cadena es la longitud de una cadena menos uno.
 
 ![String index](../images/string_index.png)
 
@@ -242,7 +241,7 @@ last_letter = language[last_index]
 print(last_letter) # n
 ```
 
-If we want to start from right end we can use negative indexing. -1 is the last index.
+Si queremos empezar por el extremo derecho podemos utilizar la indexación negativa. -1 es el último índice.
 
 ```py
 language = 'Python'
@@ -254,15 +253,15 @@ print(second_last) # o
 
 #### Slicing Python Strings
 
-In python we can slice strings into substrings.
+En python podemos cortar strings en substrings.
 
 ```py
 language = 'Python'
-first_three = language[0:3] # starts at zero index and up to 3 but not include 3
+first_three = language[0:3] # comienza en el índice 0 y hasta 3 pero no incluye 3
 print(first_three) #Pyt
 last_three = language[3:6]
 print(last_three) # hon
-# Another way
+# Otra forma
 last_three = language[-3:]
 print(last_three)   # hon
 last_three = language[3:]
@@ -271,7 +270,7 @@ print(last_three)   # hon
 
 #### Reversing a String
 
-We can easily reverse strings in python.
+Podemos invertir fácilmente las cadenas en python.
 
 ```py
 greeting = 'Hello, World!'
@@ -280,7 +279,7 @@ print(greeting[::-1]) # !dlroW ,olleH
 
 #### Skipping Characters While Slicing
 
-It is possible to skip characters while slicing by passing step argument to slice method.
+Es posible omitir caracteres mientras se corta pasando el argumento del paso al método de corte.
 
 ```py
 language = 'Python'
@@ -290,16 +289,16 @@ print(pto) # Pto
 
 ### String Methods
 
-There are many string methods which allow us to format strings. See some of the string methods in the following example:
+Hay muchos métodos de cadena que nos permiten formatear cadenas. Vea algunos de los métodos de cadena en el siguiente ejemplo:
 
-- capitalize(): Converts the first character of the string to capital letter
+- capitalize(): Convierte el primer carácter del string en mayúscula
 
 ```py
 challenge = 'thirty days of python'
 print(challenge.capitalize()) # 'Thirty days of python'
 ```
 
-- count(): returns occurrences of substring in string, count(substring, start=.., end=..). The start is a starting indexing for counting and end is the last index to count.
+- count(): retorna ocurrencias de substring en string, count(substring, start=.., end=..). El inicio es un índice inicial para contar y el final es el último índice para contar.
 
 ```py
 challenge = 'thirty days of python'
@@ -308,7 +307,7 @@ print(challenge.count('y', 7, 14)) # 1,
 print(challenge.count('th')) # 2`
 ```
 
-- endswith(): Checks if a string ends with a specified ending
+- endswith(): Comprueba si un string termina con un final especificado
 
 ```py
 challenge = 'thirty days of python'
@@ -316,7 +315,7 @@ print(challenge.endswith('on'))   # True
 print(challenge.endswith('tion')) # False
 ```
 
-- expandtabs(): Replaces tab character with spaces, default tab size is 8. It takes tab size argument
+- expandtabs(): Reemplaza el carácter de tabulación por espacios, el tamaño de tabulación por defecto es 8. Toma el argumento de tamaño de tabulación
 
 ```py
 challenge = 'thirty\tdays\tof\tpython'
@@ -324,7 +323,7 @@ print(challenge.expandtabs())   # 'thirty  days    of      python'
 print(challenge.expandtabs(10)) # 'thirty    days      of        python'
 ```
 
-- find(): Returns the index of the first occurrence of a substring, if not found returns -1
+- find(): Devuelve el índice de la 1ra ocurrencia de una subcadena, si no se encuentra devuelve -1
 
 ```py
 challenge = 'thirty days of python'
@@ -332,7 +331,7 @@ print(challenge.find('y'))  # 16
 print(challenge.find('th')) # 17
 ```
 
-- rfind(): Returns the index of the last occurrence of a substring, if not found returns -1
+- rfind(): Devuelve el índice de la última aparición de una subcadena, si no se encuentra devuelve -1
 
 ```py
 challenge = 'thirty days of python'
@@ -340,8 +339,8 @@ print(challenge.rfind('y'))  # 5
 print(challenge.rfind('th')) # 1
 ```
 
-- format(): formats string into a nicer output  
-   More about string formatting check this [link](https://www.programiz.com/python-programming/methods/string/format)
+- format(): formatea el string en una salida más agradable  
+   Para más info sobre el formato de strings consulte -> [link](https://www.programiz.com/python-programming/methods/string/format)
 
 ```py
 first_name = 'Asabeneh'
@@ -359,7 +358,7 @@ result = 'The area of a circle with radius {} is {}'.format(str(radius), str(are
 print(result) # The area of a circle with radius 10 is 314
 ```
 
-- index(): Returns the lowest index of a substring, additional arguments indicate starting and ending index (default 0 and string length - 1). If the substring is not found it raises a valueError. 
+- index(): Devuelve el índice más bajo de una subcadena, los argumentos adicionales indican el índice inicial y final (por defecto 0 y la longitud de la cadena - 1). Si no se encuentra la subcadena, genera un valueError. 
 
 ```py
 challenge = 'thirty days of python'
@@ -368,7 +367,7 @@ print(challenge.index(sub_string))  # 7
 print(challenge.index(sub_string, 9)) # error
 ```
 
-- rindex(): Returns the highest index of a substring, additional arguments indicate starting and ending index (default 0 and string length - 1)
+- rindex(): Devuelve el índice más alto de una subcadena, los argumentos adicionales indican el índice inicial y final (por defecto 0 y longitud de la cadena - 1)
 
 ```py
 challenge = 'thirty days of python'
@@ -377,7 +376,7 @@ print(challenge.rindex(sub_string))  # 8
 print(challenge.rindex(sub_string, 9)) # error
 ```
 
-- isalnum(): Checks alphanumeric character
+- isalnum(): Comprueba los caracteres alfanuméricos
 
 ```py
 challenge = 'ThirtyDaysPython'
@@ -387,24 +386,24 @@ challenge = '30DaysPython'
 print(challenge.isalnum()) # True
 
 challenge = 'thirty days of python'
-print(challenge.isalnum()) # False, space is not an alphanumeric character
+print(challenge.isalnum()) # False, el espacio no es un carácter alfanumérico
 
 challenge = 'thirty days of python 2019'
 print(challenge.isalnum()) # False
 ```
 
-- isalpha(): Checks if all string elements are alphabet characters (a-z and A-Z)
+- isalpha(): Comprueba si todos los elementos del string son caracteres del alfabeto (a-z and A-Z)
 
 ```py
 challenge = 'thirty days of python'
-print(challenge.isalpha()) # False, space is once again excluded
+print(challenge.isalpha()) # False, el espacio se excluye una vez más
 challenge = 'ThirtyDaysPython'
 print(challenge.isalpha()) # True
 num = '123'
 print(num.isalpha())      # False
 ```
 
-- isdecimal(): Checks if all characters in a string are decimal (0-9)
+- isdecimal(): Comprueba si todos los caracteres de una cadena son decimales (0-9)
 
 ```py
 challenge = 'thirty days of python'
@@ -417,7 +416,7 @@ challenge = '12 3'
 print(challenge.isdecimal())  # False, space not allowed
 ```
 
-- isdigit(): Checks if all characters in a string are numbers (0-9 and some other unicode characters for numbers)
+- isdigit(): Comprueba si todos los caracteres de un string son números (0-9 y algunos otros caracteres unicode para los números)
 
 ```py
 challenge = 'Thirty'
@@ -428,7 +427,7 @@ challenge = '\u00B2'
 print(challenge.isdigit())   # True
 ```
 
-- isnumeric(): Checks if all characters in a string are numbers or number related (just like isdigit(), just accepts more symbols, like ½)
+- isnumeric(): Comprueba si todos los caracteres de un string son números o están relacionados con ellos (al igual que isdigit(), sólo acepta más símbolos, como ½)
 
 ```py
 num = '10'
@@ -439,16 +438,16 @@ num = '10.5'
 print(num.isnumeric()) # False
 ```
 
-- isidentifier(): Checks for a valid identifier - it checks if a string is a valid variable name
+- isidentifier(): Comprueba un identificador válido - comprueba si un string es un nombre de variable válido
 
 ```py
 challenge = '30DaysOfPython'
-print(challenge.isidentifier()) # False, because it starts with a number
+print(challenge.isidentifier()) # False, porque comienza con un número
 challenge = 'thirty_days_of_python'
 print(challenge.isidentifier()) # True
 ```
 
-- islower(): Checks if all alphabet characters in the string are lowercase
+- islower(): Comprueba si todos los caracteres del alfabeto del string están en minúsculas
 
 ```py
 challenge = 'thirty days of python'
@@ -457,7 +456,7 @@ challenge = 'Thirty days of python'
 print(challenge.islower()) # False
 ```
 
-- isupper(): Checks if all alphabet characters in the string are uppercase
+- isupper(): Comprueba si todos los caracteres del alfabeto del string están en mayúsculas
 
 ```py
 challenge = 'thirty days of python'
@@ -466,7 +465,7 @@ challenge = 'THIRTY DAYS OF PYTHON'
 print(challenge.isupper()) # True
 ```
 
-- join(): Returns a concatenated string
+- join(): Devuelve un string concatenado
 
 ```py
 web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
@@ -480,21 +479,21 @@ result = '# '.join(web_tech)
 print(result) # 'HTML# CSS# JavaScript# React'
 ```
 
-- strip(): Removes all given characters starting from the beginning and end of the string
+- strip(): Elimina todos los caracteres dados empezando por el principio y el final del string
 
 ```py
 challenge = 'thirty days of pythoonnn'
 print(challenge.strip('noth')) # 'irty days of py'
 ```
 
-- replace(): Replaces substring with a given string
+- replace(): Sustituye un substring por un string dado
 
 ```py
 challenge = 'thirty days of python'
 print(challenge.replace('python', 'coding')) # 'thirty days of coding'
 ```
 
-- split(): Splits the string, using given string or space as a separator
+- split(): Divide el string, utilizando el string dado o el espacio como separador
 
 ```py
 challenge = 'thirty days of python'
@@ -503,14 +502,14 @@ challenge = 'thirty, days, of, python'
 print(challenge.split(', ')) # ['thirty', 'days', 'of', 'python']
 ```
 
-- title(): Returns a title cased string
+- title(): Devuelve un string como título
 
 ```py
 challenge = 'thirty days of python'
 print(challenge.title()) # Thirty Days Of Python
 ```
 
-- swapcase(): Converts all uppercase characters to lowercase and all lowercase characters to uppercase characters
+- swapcase(): Convierte todos los caracteres en mayúsculas en minúsculas y todos los caracteres en minúsculas en mayúsculas
 
 ```py
 challenge = 'thirty days of python'
@@ -519,7 +518,7 @@ challenge = 'Thirty Days Of Python'
 print(challenge.swapcase())  # tHIRTY dAYS oF pYTHON
 ```
 
-- startswith(): Checks if String Starts with the Specified String
+- startswith(): Comprueba si el string comienza con el string especificado
 
 ```py
 challenge = 'thirty days of python'
@@ -529,55 +528,55 @@ challenge = '30 days of python'
 print(challenge.startswith('thirty')) # False
 ```
 
-🌕 You are an extraordinary person and you have a remarkable potential. You have just completed day 4 challenges and you are four steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
+🌕 Eres una persona extraordinaria y tienes un potencial extraordinario. Acabas de completar los desafíos del día 4 y estás a cuatro pasos de tu camino hacia la grandeza. Ahora haz algunos ejercicios para tu cerebro y tus músculos.
 
 ## 💻 Exercises - Day 4
 
-1. Concatenate the string 'Thirty', 'Days', 'Of', 'Python' to a single string, 'Thirty Days Of Python'.
-2. Concatenate the string 'Coding', 'For' , 'All' to a single string, 'Coding For All'.
-3. Declare a variable named company and assign it to an initial value "Coding For All".
-4. Print the variable company using _print()_.
-5. Print the length of the company string using _len()_ method and _print()_.
-6. Change all the characters to uppercase letters using _upper()_ method.
-7. Change all the characters to lowercase letters using _lower()_ method.
-8. Use capitalize(), title(), swapcase() methods to format the value of the string _Coding For All_.
-9. Cut(slice) out the first word of _Coding For All_ string.
-10. Check if _Coding For All_ string contains a word Coding using the method index, find or other methods.
-11. Replace the word coding in the string 'Coding For All' to Python.
-12. Change Python for Everyone to Python for All using the replace method or other methods.
-13. Split the string 'Coding For All' using space as the separator (split()) .
-14. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
-15. What is the character at index 0 in the string _Coding For All_.
-16. What is the last index of the string _Coding For All_.
-17. What character is at index 10 in "Coding For All" string.
-18. Create an acronym or an abbreviation for the name 'Python For Everyone'.
-19. Create an acronym or an abbreviation for the name 'Coding For All'.
-20. Use index to determine the position of the first occurrence of C in Coding For All.
-21. Use index to determine the position of the first occurrence of F in Coding For All.
-22. Use rfind to determine the position of the last occurrence of l in Coding For All People.
-23. Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-24. Use rindex to find the position of the last occurrence of the word because in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-25. Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-26. Find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-27. Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-28. Does '\'Coding For All' start with a substring _Coding_?
-29. Does 'Coding For All' end with a substring _coding_?
-30. '&nbsp;&nbsp; Coding For All &nbsp;&nbsp;&nbsp; &nbsp;' &nbsp;, remove the left and right trailing spaces in the given string.
-31. Which one of the following variables return True when we use the method isidentifier():
+1. Concatenar el string 'Thirty', 'Days', 'Of', 'Python' a un solo string, 'Thirty Days Of Python'.
+2. Concatenar la cadena 'Coding', 'For' , 'All' a un solo string, 'Coding For All'.
+3. Declarar una variable llamada empresa y asignarle un valor inicial "Coding For All".
+4. Imprime la empresa variable utilizando _print()_.
+5. Imprime la longitud de la cadena de la empresa utilizando el método _len()_ y _print()_.
+6. Cambia todos los caracteres a mayúsculas utilizando el método _upper()_.
+7. Cambia todos los caracteres a minúsculas utilizando el método _lower()_.
+8. Utilice los métodos capitalize(), title(), swapcase() para formatear el valor de la cadena _Coding For All_.
+9. Cortar la primera palabra de la cadena _Coding For All_.
+10. Compruebe si el string _Coding For All_ contiene una palabra Codificación mediante el método index, find u otros métodos.
+11. Sustituir la palabra Coding en la cadena 'Coding For All' por Python.
+12. Cambie 'Python for Everyone' a 'Python for All' usando el metodo repalce o otros metodos
+13. Dividir la cadena 'Coding For All' utilizando el espacio como separador (split()) .
+14. "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" dividir la cadena en la coma.
+15. Cuál es el carácter en el índice 0 de la cadena _Coding For All_.
+16. Cuál es el último índice de la cadena _Coding For All_.
+17. ¿Qué carácter está en el índice 10 en el string "Coding For All" .
+18. Crear un acrónimo o una abreviatura del nombre 'Python For Everyone'.
+19. Crear un acrónimo o una abreviatura del nombre 'Coding For All'.
+20. Utilice el índice para determinar la posición de la primera aparición de C en 'Coding For All'.
+21. Utilice el índice para determinar la posición de la primera aparición de F en Coding For All.
+22. Utilice rfind para determinar la posición de la última aparición de 'l' en 'Coding For All People'.
+23. Utilice el índice o la búsqueda para encontrar la posición de la primera aparición de la palabra 'because' en la siguiente frase: 'You cannot end a sentence with because because because is a conjunction'
+24. Utilice rindex para encontrar la posición de la última aparición de la palabra 'because' en la siguiente frase: 'You cannot end a sentence with because because because is a conjunction'
+25. Cortar la frase 'because because because' en la siguiente frase: 'You cannot end a sentence with because because because is a conjunction'
+26. Encuentre la posición de la primera aparición de la palabra 'because' en la siguiente frase: 'You cannot end a sentence with because because because is a conjunction'
+27. Cortar la frase 'because because because' en la siguiente frase: 'You cannot end a sentence with because because because is a conjunction'
+28. ¿Comienza 'Coding For All' con una subcadena _Codificación_?
+29. ¿'Coding For All' termina con una subcadena _codificación_?
+30. '&nbsp;&nbsp; Coding For All &nbsp;&nbsp;&nbsp; &nbsp;' &nbsp;, elimina los espacios finales izquierdo y derecho de la cadena dada.
+31. Cuál de las siguientes variables devuelve True cuando utilizamos el método isidentifier():
     - 30DaysOfPython
     - thirty_days_of_python
-32. The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
-33. Use the new line escape sequence to separate the following sentences.
+32. La siguiente lista contiene los nombres de algunas de las bibliotecas de Python: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Unir la lista con un hash con cadena de espacio.
+33. Utilice la secuencia de escape de línea nueva para separar las siguientes frases.
     ```py
     I am enjoying this challenge.
     I just wonder what is next.
     ```
-34. Use a tab escape sequence to write the following lines.
+34. Utilice una secuencia de tab escape para escribir las siguientes líneas.
     ```py
     Name      Age     Country   City
     Asabeneh  250     Finland   Helsinki
     ```
-35. Use the string formatting method to display the following:
+35. Utilice el método de formato de string para mostrar lo siguiente:
 
 ```sh
 radius = 10
@@ -585,7 +584,7 @@ area = 3.14 * radius ** 2
 The area of a circle with radius 10 is 314 meters square.
 ```
 
-36. Make the following using string formatting methods:
+36. Haga lo siguiente utilizando métodos de formato de cadena:
 
 ```sh
 8 + 6 = 14

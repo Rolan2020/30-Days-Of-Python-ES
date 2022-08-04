@@ -299,8 +299,8 @@ Your weekly earning is 1120
 22. Escribe un script que pida al usuario que introduzca el número de años. Calcula el número de segundos que puede vivir una persona. Suponga que una persona puede vivir cien años
 
 ```py
-Enter number of years you have lived: 100
-You have lived for 3153600000 seconds.
+Introduzca el número de años que ha vivido: 100
+Has vivido 3153600000 segundos.
 ```
 
 23. Escribe un script en Python que muestre la siguiente tabla
