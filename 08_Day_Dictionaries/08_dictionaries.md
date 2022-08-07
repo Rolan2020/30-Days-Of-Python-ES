@@ -39,16 +39,17 @@
 
 ## Dictionaries
 
-A dictionary is a collection of unordered, modifiable(mutable) paired (key: value) data type.
+Un diccionario es una colección de datos desordenados, modificables (mutable) y emparejados (key: value).
+
 
 ### Creating a Dictionary
 
-To create a dictionary we use curly brackets, {} or the *dict()* built-in function.
+Para crear un diccionario utilizamos corchetes, {} o la función incorporada *dict()*.
 
 ```py
 # syntax
 empty_dict = {}
-# Dictionary with data values
+# Diccionario con valores de datos
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 ```
 
@@ -69,11 +70,11 @@ person = {
     }
 ```
 
-The dictionary above shows that a value could be any data types:string, boolean, list, tuple, set or a dictionary.
+El diccionario anterior muestra que un valor puede ser de cualquier tipo de datos: string, boolean, list, tuple, set o un dictionary.
 
 ### Dictionary Length
 
-It checks the number of 'key: value' pairs in the dictionary.
+Comprueba el número de pares 'key: value' en el diccionario.
 
 ```py
 # syntax
@@ -102,7 +103,7 @@ print(len(person)) # 7
 
 ### Accessing Dictionary Items
 
-We can access Dictionary items by referring to its key name.
+Podemos acceder a los elementos del diccionario haciendo referencia a su key name (nombre clave).
 
 ```py
 # syntax
@@ -134,7 +135,7 @@ print(person['address']['street']) # Space street
 print(person['city'])       # Error
 ```
 
-Accessing an item by key name raises an error if the key does not exist. To avoid this error first we have to check if a key exist or we can use the _get_ method. The get method returns None, which is a NoneType object data type, if the key does not exist.
+Acceder a un elemento por el nombre de la key genera un error si la key no existe. Para evitar este error primero tenemos que comprobar si la key existe o podemos utilizar el método _get_. El método get devuelve None, que es un tipo de datos del objeto NoneType, si la key no existe.
 ```py
 person = {
     'first_name':'Asabeneh',
@@ -156,7 +157,7 @@ print(person.get('city'))   # None
 
 ### Adding Items to a Dictionary
 
-We can add new key and value pairs to a dictionary
+Podemos añadir nuevos pares de key y valores a un diccionario
 
 ```py
 # syntax
@@ -186,7 +187,7 @@ print(person)
 
 ### Modifying Items in a Dictionary
 
-We can modify items in a dictionary
+Podemos modificar los elementos de un diccionario
 
 ```py
 # syntax
@@ -215,7 +216,7 @@ person['age'] = 252
 
 ### Checking Keys in a Dictionary
 
-We use the _in_ operator to check if a key exist in a dictionary
+ _in_ -> para comprobar si una key existe en un diccionario
 
 ```py
 # syntax
@@ -225,18 +226,19 @@ print('key5' in dct) # False
 ```
 
 ### Removing Key and Value Pairs from a Dictionary
+(Eliminación de pares de keys y valores de un diccionario)
 
-- _pop(key)_: removes the item with the specified key name:
-- _popitem()_: removes the last item
-- _del_: removes an item with specified key name
+- _pop(key)_: elimina el elemento con el nombre key especificado:
+- _popitem()_: elimina el último elemento
+- _del_: elimina un elemento con el nombre key especificado
 
 ```py
 # syntax
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
-dct.pop('key1') # removes key1 item
+dct.pop('key1') # Elimina el elemento key1
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
-dct.popitem() # removes the last item
-del dct['key2'] # removes key2 item
+dct.popitem() # elimina el último elemento
+del dct['key2'] # elimina el elemento key2
 ```
 
 **Example:**
@@ -254,14 +256,15 @@ person = {
         'zipcode':'02210'
     }
     }
-person.pop('first_name')        # Removes the firstname item
-person.popitem()                # Removes the address item
-del person['is_married']        # Removes the is_married item
+person.pop('first_name')        # Elimina el elemento firstname
+person.popitem()                # Elimina el elemento address
+del person['is_married']        # Elimina el elemento is_married
 ```
 
 ### Changing Dictionary to a List of Items
+(Cambiar el diccionario por una lista de elementos)
 
-The _items()_ method changes dictionary to a list of tuples.
+El método _items()_ cambia el diccionario por una lista de tuplas.
 
 ```py
 # syntax
@@ -271,7 +274,7 @@ print(dct.items()) # dict_items([('key1', 'value1'), ('key2', 'value2'), ('key3'
 
 ### Clearing a Dictionary
 
-If we don't want the items in a dictionary we can clear them using _clear()_ method
+Si no queremos los elementos de un diccionario podemos borrarlos usando el método _clear()_.
 
 ```py
 # syntax
@@ -291,7 +294,7 @@ del dct
 
 ### Copy a Dictionary
 
-We can copy a dictionary using a _copy()_ method. Using copy we can avoid mutation of the original dictionary.
+Podemos copiar un diccionario utilizando el método _copy()_. Usando la copia podemos evitar la mutación del diccionario original.
 
 ```py
 # syntax
@@ -301,7 +304,7 @@ dct_copy = dct.copy() # {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key
 
 ### Getting Dictionary Keys as a List
 
-The _keys()_ method gives us all the keys of a a dictionary as a list.
+El método _keys()_ nos da todas las keys de un diccionario como una lista.
 
 ```py
 # syntax
@@ -312,7 +315,7 @@ print(keys)     # dict_keys(['key1', 'key2', 'key3', 'key4'])
 
 ### Getting Dictionary Values as a List
 
-The _values_ method gives us all the values of a a dictionary as a list.
+El método _values_ nos da todos los valores de un diccionario como una lista.
 
 ```py
 # syntax
@@ -321,21 +324,21 @@ values = dct.values()
 print(values)     # dict_values(['value1', 'value2', 'value3', 'value4'])
 ```
 
-🌕 You are astonishing. Now, you are super charged with the power of dictionaries. You have just completed day 8 challenges and you are 8 steps a head in to your way to greatness. Now do some exercises for your brain and  muscles.
+🌕 Eres asombroso. Ahora, estás súper cargado con el poder de los diccionarios. Acabas de completar los desafíos del día 8 y estás a 8 pasos de tu camino a la grandeza. Ahora haz algunos ejercicios para tu cerebro y tus músculos.
 
 ## 💻 Exercises: Day 8
 
-1. Create  an empty dictionary called dog
-2. Add name, color, breed, legs, age to the dog dictionary
-3. Create a student dictionary and add first_name, last_name, gender, age, marital status, skills, country, city and address as keys for the dictionary
-4. Get the length of the student dictionary
-5. Get the value of skills and check the data type, it should be a list
-6. Modify the skills values by adding one or two skills
-7. Get the dictionary keys as a list
-8. Get the dictionary values as a list
-9. Change the dictionary to a list of tuples using _items()_ method
-10. Delete one of the items in the dictionary
-11. Delete one of the dictionaries
+1. Crear un diccionario vacío llamado perro
+2. Añade nombre, color, raza, patas y edad al diccionario de perros
+3. Cree un diccionario de estudiantes y añada nombre, apellido, sexo, edad, estado civil, habilidades, país, ciudad y dirección como keys del diccionario
+4. Obtenga la longitud del diccionario del estudiante
+5. Obtenga el valor de las habilidades y compruebe el tipo de datos, debe ser una lista
+6. Modifica los valores de las habilidades añadiendo una o dos habilidades
+7. Obtenga las keys del diccionario como una lista
+8. Obtener los valores del diccionario como una lista
+9. Cambiar el diccionario a una lista de tuplas utilizando el método _items()_.
+10. Eliminar uno de los elementos del diccionario
+11. Borrar uno de los diccionarios
 
 🎉 CONGRATULATIONS ! 🎉
 
